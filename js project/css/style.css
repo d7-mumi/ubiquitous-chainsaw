@@ -151,11 +151,17 @@ section {
 }
 
 
-/*** About ****/
+/** Content Boxes **/
 
 .content-box-lg {
     padding: 120px 0;
 }
+
+.content-box-md {
+    padding: 100px 0; /* first: top+bottom, second:left+right */
+}
+
+/*** About ****/
 
 .vertical-heading h5{
     color: #f4c613;
@@ -189,4 +195,76 @@ section {
     text-align: center;
 }
 
+/*** About part 2**/
+
+.about-02{
+    background-color: #f4f4f4;
+}
+
+.about-item {
+    background-color: #fff;
+    padding: 80px 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /*first: horizontal shadow, second: vertical shadow, third: blur distance, fourth: color rgb*/
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.about-item i {
+    font-size: 42px;
+    margin: 0;
+}
+
+.about-item h3 {
+    font-size: 24px;
+    margin: 10px;
+}
+
+.about-item hr{
+    width: 45px;
+    height: 3px;
+    background-color: #f4c613;
+    margin: 0 auto;
+    border: none;
+}
+
+.about-item p {
+    margin-top: 2px;  
+}
+
+.about-item:hover {
+    transform: translateY(-30px);
+}
+
+/* Hover State */
+.about-item:hover {
+    background-color: #f4c613;
+}
+
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color: #fff;
+}
+
+.about-item:hover hr{
+    background-color: #ffff;
+}
+
+/* Smooth transition */
+
+.about-item,
+.about-item i,
+.about-item hr {
+    transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
+}
+
+
+.owl-carousel {
+    display: inline-flex;
+    text-align: center;
+}
+
+.owl-carousel #team-member{
+    padding: 10px;
+}
 
