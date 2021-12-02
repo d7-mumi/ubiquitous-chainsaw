@@ -187,3 +187,46 @@ function removeDuplicates(data){
   //console.log(unique);
   return unique;
 }
+
+
+console.log('------------Part 3--------------');
+
+const gameEvents = new Map([
+  [17, '⚽ GOAL'],
+  [36, '� Substitution'],
+  [47, '⚽ GOAL'],
+  [61, '� Substitution'],
+  [64, '� Yellow card'],
+  [69, '� Red card'],
+  [70, '� Substitution'],
+  [72, '� Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, '� Yellow card'],
+]);
+
+//console.log(gameEvents);
+const arrEvents = [];
+for(const item of gameEvents){
+  //console.log(item[1]);
+  arrEvents.push(item[1]);
+}
+
+//console.log(arrEvents)
+
+const events = new Set(arrEvents);
+console.log(events);
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+
+for(let item of gameEvents){
+  const res = (item[0] >= 0 && item[0] <= 45) ? '[FIRST HALF]' : '[SECOND HALF]';
+  console.log(
+     res + item[0] + ': ' + item[1]
+  )
+}
+
+ 
